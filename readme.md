@@ -1,8 +1,10 @@
-# Proyecto Final - SEO On-Page, Off-Page y Técnico
+# Proyecto Final - SEO, Git y Buenas Prácticas Web
 
-## Descripción
+## Descripción del proyecto
 
-Este proyecto tiene como objetivo aplicar los conceptos de SEO On-Page, SEO Off-Page y SEO Técnico utilizando HTML5 y CSS3. Además, se implementó un flujo de trabajo con Git y GitHub para documentar el desarrollo mediante commits y ramas.
+Este proyecto consiste en el desarrollo de un sitio web utilizando HTML5 y CSS3 aplicando buenas prácticas de SEO On-Page, accesibilidad, optimización de imágenes y organización profesional del código mediante Git y GitHub.
+
+Durante el desarrollo se implementó un flujo de trabajo basado en ramas para mantener una correcta organización de cambios y facilitar el control de versiones.
 
 ---
 
@@ -12,153 +14,272 @@ Este proyecto tiene como objetivo aplicar los conceptos de SEO On-Page, SEO Off-
 - CSS3
 - Git
 - GitHub
+- Visual Studio Code
 
 ---
 
-# SEO On-Page implementado
+# Implementación SEO
 
-Se aplicaron las siguientes buenas prácticas de optimización:
+## SEO On-Page
 
-- Uso de la etiqueta `<title>` con palabras clave relevantes.
-- Implementación de la etiqueta `<meta name="description">`.
-- Organización correcta de encabezados (`<h1>` hasta `<h3>`).
-- Uso de etiquetas semánticas:
-  - `<header>`
-  - `<main>`
-  - `<section>`
-  - `<article>`
-  - `<footer>`
-- URLs amigables.
-- Uso del atributo `alt` en todas las imágenes.
-- Optimización del contenido para mejorar la accesibilidad.
+Se aplicaron las siguientes mejoras:
 
----
+- Uso correcto de la etiqueta `<title>`.
+- Implementación de `<meta name="description">`.
+- Uso jerárquico de encabezados:
+  - `<h1>` para el título principal.
+  - `<h2>` para secciones.
+  - `<h3>` para subsecciones.
 
-# SEO Off-Page
+- Implementación de etiquetas semánticas HTML5:
 
-Se realizó un análisis del posicionamiento del sitio considerando:
+```html
+<header>
+<nav>
+<main>
+<section>
+<article>
+<footer>
+```
 
-- Importancia de los backlinks.
-- Autoridad del dominio.
-- Presencia en redes sociales.
-- Estrategias de Link Building.
-- Marketing de contenidos externos.
-
-Acciones recomendadas:
-
-- Obtener enlaces desde sitios con buena autoridad.
-- Publicar contenido de calidad.
-- Compartir contenido en redes sociales.
-- Participar en comunidades relacionadas con la temática.
-
----
-
-# SEO Técnico
-
-Se analizaron los principales aspectos técnicos del sitio:
-
-- Arquitectura del sitio.
-- Sitemap XML.
-- Archivo robots.txt.
-- Optimización del rendimiento.
-- Optimización de imágenes.
-- Accesibilidad.
-- Datos estructurados.
-
-También se revisaron conceptos relacionados con Google Search Console para la detección de errores de indexación y cobertura.
+Estas etiquetas permiten que los motores de búsqueda comprendan mejor la estructura del contenido.
 
 ---
 
 # Optimización de imágenes
 
-Para mejorar el rendimiento del sitio se optimizaron las imágenes utilizando el formato WEBP.
+Las imágenes utilizadas en el proyecto fueron optimizadas para mejorar el rendimiento.
 
-## Beneficios del formato WEBP
+## Buenas prácticas aplicadas:
 
-- Menor tamaño de archivo.
-- Mejor velocidad de carga.
-- Conserva una excelente calidad visual.
-- Favorece el posicionamiento SEO.
-
-### Ejemplo
-
-![Repositorio Git HUb](image-1.png)
-- Imagen de mi repositorio Git Hub
-- Solo contiene un archivo Readme.md
-- Hecho en la rama Master
----
-
-# Accesibilidad
-
-Todas las imágenes poseen el atributo `alt` para mejorar la accesibilidad y facilitar la comprensión del contenido por parte de los motores de búsqueda.
+- Uso de formatos comprimidos.
+- Reducción del peso de archivos.
+- Implementación del atributo `alt`.
+- Mejora de accesibilidad.
 
 Ejemplo:
 
 ```html
-<img src="img/banner.webp"
-     alt="Banner principal con productos destacados">
+<img 
+src="img/producto.png" 
+alt="Producto destacado del catálogo">
 ```
 
-Beneficios:
+El atributo `alt` permite:
 
-- Compatible con lectores de pantalla.
-- Mejor indexación en Google.
-- Mayor accesibilidad para personas con discapacidad visual.
+- Mejor accesibilidad para lectores de pantalla.
+- Mejor interpretación del contenido por parte de Google.
+- Mejora de la experiencia del usuario.
 
 ---
 
-# Gestión del proyecto con Git
+# Validación HTML
 
-Durante el desarrollo se utilizó Git para controlar las versiones del proyecto.
+Antes de la entrega final se realizó una revisión del archivo `index.html`.
+
+Se corrigieron errores relacionados con etiquetas de imágenes:
+
+Antes:
+
+```html
+<img src="imagen.png">
+```
+
+Después:
+
+```html
+<img 
+src="img/imagen.png"
+alt="Descripción de la imagen">
+```
+
+Correcciones realizadas:
+
+- Se agregaron atributos `alt` obligatorios.
+- Se verificaron rutas de archivos.
+- Se revisó la correcta apertura y cierre de etiquetas.
+- Se eliminó código innecesario.
+
+El documento HTML quedó validado y sin errores de sintaxis.
+
+---
+
+# Flujo de trabajo Git Flow
+
+Para organizar el desarrollo se utilizó un flujo basado en ramas.
 
 ## Ramas utilizadas
 
-- main → Rama principal del proyecto.
-- feature-seo → Implementación de mejoras SEO.
-- feature-images → Optimización de imágenes.
+### main
+
+Contiene la versión estable y final del proyecto.
+
+### develop
+
+Rama utilizada para integrar nuevas funcionalidades antes de pasar a producción.
+
+### feature-seo
+
+Utilizada para implementar:
+
+- Etiquetas SEO.
+- Meta descripción.
+- Mejoras semánticas HTML.
+
+### feature-images
+
+Utilizada para:
+
+- Optimización de imágenes.
+- Implementación de atributos alt.
+- Mejoras de accesibilidad.
+
+---
+
+# Proceso de desarrollo
+
+El flujo aplicado fue:
+
+1. Creación del repositorio en GitHub.
+
+2. Creación de la rama principal:
+
+```
+main
+```
+
+3. Creación de rama de desarrollo:
+
+```
+develop
+```
+
+4. Creación de ramas específicas:
+
+```
+feature-seo
+feature-images
+```
+
+5. Desarrollo de cambios en cada rama.
+
+6. Creación de Pull Requests para revisar modificaciones.
+
+7. Unión de ramas mediante merge.
+
+8. Actualización final de la rama main.
+
+---
+
+# Pull Requests realizados
+
+Los cambios fueron organizados mediante Pull Requests.
+
+Ejemplo:
+
+## Pull Request 1
+
+Nombre:
+
+```
+Implementación SEO On-Page
+```
+
+Cambios realizados:
+
+- Agregado title.
+- Agregada meta description.
+- Mejorada estructura HTML.
+
+---
+
+## Pull Request 2
+
+Nombre:
+
+```
+Optimización de imágenes y accesibilidad
+```
+
+Cambios realizados:
+
+- Corrección de imágenes.
+- Incorporación de atributos alt.
+- Mejora del rendimiento.
 
 ---
 
 # Historial de commits
 
-| Commit | Descripción |
-|---------|-------------|
-| Initial commit | Creación del proyecto. |
-| Agrega estructura HTML | Desarrollo inicial de la página. |
-| Agrega estilos CSS | Diseño y estilos principales. |
-| Implementa SEO On-Page | Optimización de etiquetas HTML. |
-| Optimiza imágenes WEBP | Conversión y reducción del peso de imágenes. |
-| Actualiza README | Documentación final del proyecto. |
+Los commits fueron realizados utilizando mensajes claros y descriptivos.
+
+Ejemplo:
+
+```
+Initial commit - creación del proyecto
+```
+
+```
+Agrega estructura HTML semántica
+```
+
+```
+Implementa estilos CSS principales
+```
+
+```
+Agrega etiquetas SEO On-Page
+```
+
+```
+Optimiza imágenes y agrega atributos alt
+```
+
+```
+Corrige errores de sintaxis HTML
+```
+
+```
+Actualiza documentación README
+```
 
 ---
 
-# Evidencias
+# Buenas prácticas aplicadas en Git
 
-Se incluyen capturas de pantalla de:
+Durante el desarrollo se aplicaron las siguientes prácticas:
 
-- Repositorio en GitHub.
-- Historial de commits.
-- Ramas del proyecto.
-- Código HTML con atributos `alt`.
-- Imágenes optimizadas.
-- Resultado del análisis SEO.
-
----
-
-# Repositorio
-
-Enlace al repositorio del proyecto:
-
-**https://github.com/TU-USUARIO/TU-REPOSITORIO**
-
-(Reemplazar por el enlace correspondiente.)
+- Commits pequeños y específicos.
+- Nombres descriptivos.
+- Uso de ramas independientes.
+- Revisión mediante Pull Requests.
+- Conservación de una rama main estable.
 
 ---
 
-# Conclusiones
+# Estructura del proyecto
 
-La implementación conjunta de técnicas de SEO On-Page, SEO Off-Page y SEO Técnico permite mejorar significativamente la visibilidad de un sitio web en los motores de búsqueda.
+```
+Proyecto
+│
+├── index.html
+│
+├── css
+│   └── styles.css
+│
+├── img
+│   ├── imagen1.png
+│   ├── imagen2.png
+│
+└── README.md
+```
 
-El uso de imágenes optimizadas en formato WEBP, etiquetas semánticas, atributos `alt` y una correcta estructura HTML contribuye tanto al rendimiento como a la accesibilidad.
+---
 
-Asimismo, la utilización de Git y GitHub facilita el control de versiones, la organización del desarrollo y la documentación del proyecto mediante commits y ramas.
+# Conclusión
+
+El proyecto integra buenas prácticas de desarrollo web, SEO y control de versiones.
+
+La implementación de una estructura HTML correcta, imágenes optimizadas, accesibilidad mediante atributos alt y una metodología organizada con Git Flow permiten crear un sitio más eficiente, mantenible y preparado para los motores de búsqueda.
+
+El uso de ramas y Pull Requests permitió trabajar de manera profesional, simulando un entorno real de desarrollo colaborativo.
