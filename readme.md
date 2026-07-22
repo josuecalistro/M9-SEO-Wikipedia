@@ -52,3 +52,4 @@ Proyecto
 El proyecto fue gestionado utilizando Git y alojado en GitHub.
 
 Se realizaron commits descriptivos para registrar los cambios realizados durante el desarrollo.
+espero que este bien
